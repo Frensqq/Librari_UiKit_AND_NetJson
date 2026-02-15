@@ -4,6 +4,7 @@ package com.example.uikit.UI
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
@@ -22,7 +23,7 @@ val Placeholder = Color(0xff939396)
 val Description = Color(0xff7E7E9A)
 val CardStr = Color(0xffF4F4F4)
 
-
+@Composable
 fun colorBigButton() = ButtonDefaults.buttonColors(
     containerColor = Accent,
     contentColor = White,
@@ -30,12 +31,14 @@ fun colorBigButton() = ButtonDefaults.buttonColors(
     disabledContentColor = White
 )
 
+@Composable
 fun colorSmallButton() = ButtonDefaults.buttonColors(
     containerColor = White,
     contentColor = Accent,
     disabledContainerColor = White,
     disabledContentColor = AccentInactive
 )
+@Composable
 fun colorChipsButton() = ButtonDefaults.buttonColors(
     containerColor = InputBg,
     contentColor = Description,
@@ -43,6 +46,7 @@ fun colorChipsButton() = ButtonDefaults.buttonColors(
     disabledContentColor = Description
 )
 
+@Composable
 fun colorTextField() = OutlinedTextFieldDefaults.colors(
     unfocusedContainerColor = InputBg,
     focusedContainerColor = InputBg,
