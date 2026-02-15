@@ -4,6 +4,7 @@ package com.example.uikit.UI
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.OutlinedTextField
 import androidx.compose.material3.OutlinedTextFieldDefaults
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 
 
@@ -61,4 +62,18 @@ fun colorTextField() = OutlinedTextFieldDefaults.colors(
     unfocusedTextColor = Black,
     focusedTextColor = Black,
     errorTextColor = Black,
+)
+
+val greenGradient = Brush.linearGradient(
+    colors = listOf(
+        Color(0xff75D8BC),
+        Color(0xff5BADCB)
+    )
+
+)
+val blueGradient = Brush.linearGradient(
+    colors = listOf(
+        Color(0xffB4D5FF),
+        Color(0xff60A6FD)
+    )
 )
