@@ -28,7 +28,7 @@ import com.example.uikit.UI.Typography
 
 
 @Composable
-fun InputsImage(
+fun inputsImage(
     OnClick: () -> Unit,
     content: @Composable () -> Unit,
     paint: Painter?,
