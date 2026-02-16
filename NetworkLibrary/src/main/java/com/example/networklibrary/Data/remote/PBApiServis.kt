@@ -1,5 +1,6 @@
 package com.example.networklibrary.Data.remote
 
+import androidx.compose.ui.graphics.GraphicsLayerScope
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -13,22 +14,24 @@ object PBApiServis {
     }
 
     val instance: PBApi by lazy {
-        val client = OkHttpClient.Builder()
-            .addInterceptor { chain ->
-                val request = chain.request().newBuilder()
-                authToken?.let { token ->
-                    request.addHeader("Authorization", "Bearer $token")
-                }
-                chain.proceed(request.build())
-            }
-            .build()
 
-        Retrofit.Builder()
+        val client = OkHttpClient
+            .Builder().addInterceptor { chain ->
+                chain.proceed(
+                    chain.request().newBuilder().apply {
+                        authToken?.let { addHeader("Authorization", "Bearer ${it}") }
+                    }.build()
+                )
+            }.build()
+
+
+        val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(PBApi::class.java)
+
+        retrofit.create(PBApi::class.java)
     }
 
     fun createImgUrl(collection: String, record: String, image: String): String {

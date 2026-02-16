@@ -3,7 +3,7 @@ package com.example.networklibrary.Domain.model
 data class CartItem(
     val productId: String,
     val name: String,
-    val price: Int,
+    val price: Number,
     val quantity: Int
 )
 data class Basket (

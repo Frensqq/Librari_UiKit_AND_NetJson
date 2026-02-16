@@ -22,8 +22,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import com.example.uikit.Button.SmallButton
-import com.example.uikit.Components.SpacerH
+import com.example.uikit.Component.Buttons.SmallButton
+import com.example.uikit.Component.Spacers.SpacerH
+
 import com.example.uikit.UI.Black
 import com.example.uikit.UI.Placeholder
 import com.example.uikit.UI.Typography

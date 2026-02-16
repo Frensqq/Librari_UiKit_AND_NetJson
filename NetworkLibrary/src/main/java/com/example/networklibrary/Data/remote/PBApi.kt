@@ -82,7 +82,7 @@ interface PBApi {
 
 
     @GET("collections/basket/records")
-    suspend fun getBaskets(@Query("sort") sort: String): ResponseBasket
+    suspend fun getBaskets(): ResponseBasket
 
     @POST("collections/basket/records")
     suspend fun postBasket(@Body request: RequestBasket): Basket

@@ -108,7 +108,7 @@ class BasketTeststWO {
         }
 
         // Получаем все корзины пользователя
-        val response = api.getBaskets("-created")
+        val response = api.getBaskets()
 
         println("📊 Найдено корзин: ${response.totalItems}")
         println("📦 Корзины пользователя $testUserId:")

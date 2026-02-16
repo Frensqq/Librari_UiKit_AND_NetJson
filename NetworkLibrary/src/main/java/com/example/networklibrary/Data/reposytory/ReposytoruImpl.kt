@@ -80,8 +80,8 @@ class ReposytoruImpl(private val api: PBApi, private val context: Context, priva
         api.getBasket(basketId)
     }
 
-    override suspend fun getBaskets(sort: String): NetworkResult<ResponseBasket> =safeApiCall{
-        api.getBaskets(sort)
+    override suspend fun getBaskets(): NetworkResult<ResponseBasket> =safeApiCall{
+        api.getBaskets()
     }
 
     override suspend fun getNews(page: Int, perPage: Int): NetworkResult<ResponseNews> =safeApiCall{

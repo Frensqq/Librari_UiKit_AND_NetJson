@@ -12,7 +12,7 @@ data class Project (
     val type:	String,
     val date_start:	String,
     val date_end:	String,
-    val size:	Number,
+    val size:	String,
     val description_source	:	String,
     val technical_drawing:	String,
     val user_id: String

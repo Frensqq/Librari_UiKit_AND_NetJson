@@ -35,7 +35,7 @@ data class BasketResponse(
 data class CartItem(
     val productId: String,
     val name: String,
-    val price: Int,
+    val price: Number,
     val quantity: Int
 )
 
@@ -94,7 +94,7 @@ class BasketTests {
         api.postBasket(RequestBasket(testUserId, gson.toJson(items2), items2.size))
 
         // Получаем все корзины пользователя
-        val response = api.getBaskets("-created")
+        val response = api.getBaskets()
 
         println("📊 Всего корзин: ${response.totalItems}")
         println("📦 Список корзин пользователя $testUserId:")

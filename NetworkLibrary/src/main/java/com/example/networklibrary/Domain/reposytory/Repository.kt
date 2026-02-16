@@ -58,7 +58,7 @@ interface Repository {
 
     suspend  fun getProject(projectId : String): NetworkResult<Project>
 
-    suspend fun getBaskets( sort: String): NetworkResult<ResponseBasket>
+    suspend fun getBaskets(): NetworkResult<ResponseBasket>
 
     suspend fun postBasket( request: RequestBasket): NetworkResult<Basket>
 
