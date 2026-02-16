@@ -62,7 +62,7 @@ fun selectDate(
                     painter = painterResource(R.drawable.icon_chevron_down),
                     contentDescription = null, tint = Black,
                     modifier = Modifier.clickable {
-
+                        state = !state
                     }
                 )
             },
